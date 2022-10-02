@@ -114,12 +114,12 @@ const editDelete = (event) => {
     if (action == "edit") {
       editClient(index);
     } else {
-      const client = readClient()[index]
-      const response = confirm (`Deseja realmente excluir o ${client.nome}?`)
+      const client = readClient()[index];
+      const response = confirm(`Deseja realmente excluir o ${client.nome}?`);
       if (response) {
-      deleteClient(index);
-      updateTable();
-    }
+        deleteClient(index);
+        updateTable();
+      }
     }
   }
 };
@@ -133,6 +133,7 @@ document
 
 document.getElementById("modalClose").addEventListener("click", closeModal);
 document.getElementById("salvar").addEventListener("click", saveClient);
+document.getElementById("cancelar").addEventListener("click", closeModal);
 
 document
   .querySelector("#tableClient>tbody")
